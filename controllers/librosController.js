@@ -4,7 +4,7 @@ module.exports={
     index: function(req,res){
        libro.obtener(conexion,function(err,datos){
            console.log(datos);
-           res.render('index', { title: 'CRUD Aplicacion' });
+           res.render('libros/index', { title: 'CRUD Aplicacion',libros:datos });
         });
         
     }
